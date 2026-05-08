@@ -726,23 +726,13 @@
     }
     .agent-badge.live  { background: rgba(0,165,161,0.2); color: var(--accent-l); border: 1px solid rgba(0,165,161,0.35); }
     .agent-badge.future { background: rgba(228,162,1,0.15); color: #FCC003; border: 1px solid rgba(228,162,1,0.3); }
-    .agent-chevron-bar {
-      display: flex; align-items: center; justify-content: space-between;
-      margin-top: auto; padding-top: 7px;
-      border-top: 1px solid rgba(0,179,255,0.15);
-    }
-    .agent-chevron-label {
-      font-size: 10px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase;
-      color: rgba(0,179,255,0.55);
-    }
-    .agent-tile.active .agent-chevron-label { color: var(--sf-blue-l); }
     .agent-chevron {
-      width: 28px; height: 28px; border-radius: 50%;
+      position: absolute; bottom: 10px; right: 12px;
+      width: 26px; height: 26px; border-radius: 50%;
       background: rgba(0,179,255,0.12); border: 1px solid rgba(0,179,255,0.35);
       display: flex; align-items: center; justify-content: center;
-      font-size: 18px; line-height: 1; color: rgba(0,179,255,0.7);
+      font-size: 17px; line-height: 1; color: rgba(0,179,255,0.7);
       transition: transform 0.3s, background 0.2s, color 0.2s;
-      flex-shrink: 0;
     }
     .agent-tile.active .agent-chevron {
       transform: rotate(180deg);
@@ -969,7 +959,7 @@
     <h2 class="section-title" style="margin-bottom: 16px;">Agents + Humans = Healthier Outcomes.</h2>
 
     <!-- Agent row -->
-    <p style="font-size: 10px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--sf-blue-l); margin-bottom: 8px;">AI Agents — click to explore</p>
+    <p style="font-size: 10px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--sf-blue-l); margin-bottom: 8px;">AI Agents — Do the Heavy Lifting</p>
     <div style="display: flex; flex-direction: column; width: 100%; max-width: 820px; margin-bottom: 24px;">
 
       <!-- Tiles row -->
@@ -982,11 +972,8 @@
             <img src="assets/icons/2d/Agentforce.svg" width="24" height="24" alt="Agentforce" />
           </div>
           <p class="card-title" style="font-size: 14px;">Document Extract Agent</p>
-          <p class="card-body" style="font-size: 12px; margin-top: 4px; flex: 1;">The 24/7 background worker — ingests every inbound referral PDF without coordinator involvement.</p>
-          <div class="agent-chevron-bar">
-            <span class="agent-chevron-label">Click to explore</span>
-            <div class="agent-chevron">▾</div>
-          </div>
+          <p class="card-body" style="font-size: 12px; margin-top: 4px;">The 24/7 background worker — ingests every inbound referral PDF without coordinator involvement.</p>
+          <div class="agent-chevron">▾</div>
         </div>
 
         <!-- Agent 2: Care Lead Assistive -->
@@ -996,11 +983,8 @@
             <img src="assets/icons/2d/Agentforce.svg" width="24" height="24" alt="Agentforce" />
           </div>
           <p class="card-title" style="font-size: 14px;">Care Lead Assistive Agent</p>
-          <p class="card-body" style="font-size: 12px; margin-top: 4px; flex: 1;">The in-workflow copilot — surfaces patient context so coordinators focus on decisions, not file hunting.</p>
-          <div class="agent-chevron-bar">
-            <span class="agent-chevron-label">Click to explore</span>
-            <div class="agent-chevron">▾</div>
-          </div>
+          <p class="card-body" style="font-size: 12px; margin-top: 4px;">The in-workflow copilot — surfaces patient context so coordinators focus on decisions, not file hunting.</p>
+          <div class="agent-chevron">▾</div>
         </div>
 
         <!-- Agent 3: Call Back -->
@@ -1010,11 +994,8 @@
             <img src="assets/icons/2d/Agentforce.svg" width="24" height="24" alt="Agentforce" />
           </div>
           <p class="card-title" style="font-size: 14px;">Call Back Agent</p>
-          <p class="card-body" style="font-size: 12px; margin-top: 4px; flex: 1;">The outbound initiator — automatically contacts providers when mandatory fields are missing from a referral.</p>
-          <div class="agent-chevron-bar">
-            <span class="agent-chevron-label">Click to explore</span>
-            <div class="agent-chevron">▾</div>
-          </div>
+          <p class="card-body" style="font-size: 12px; margin-top: 4px;">The outbound initiator — automatically contacts providers when mandatory fields are missing from a referral.</p>
+          <div class="agent-chevron">▾</div>
         </div>
 
       </div><!-- /tiles row -->
