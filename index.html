@@ -1038,7 +1038,7 @@
   ─────────────────────────────────────────────────────────── -->
   <div class="slide bg-dark" data-section="Beyond the POC" style="padding: 48px 72px; justify-content: flex-start; align-items: stretch; overflow-y: auto;">
 
-    <div style="margin-bottom: 28px;">
+    <div style="margin-bottom: 24px;">
       <p class="eyebrow" style="margin-bottom: 6px;">Built once. Designed for more.</p>
       <h2 class="section-title" style="font-size: clamp(24px,2.8vw,36px); margin-bottom: 0;">
         This POC is the <em style="color: var(--accent-l); font-style: normal;">foundation</em>, not the ceiling.
@@ -1049,185 +1049,182 @@
     <div style="display: grid; grid-template-columns: repeat(3,1fr); gap: 20px; width: 100%; flex: 1;">
 
       <!-- ── PILLAR 1: SCALABILITY ── -->
-      <div style="background: rgba(2,42,192,0.22); border: 1px solid rgba(0,179,255,0.22); border-radius: 16px; overflow: hidden; display: flex; flex-direction: column;">
-        <div style="padding: 20px 22px 14px; border-bottom: 1px solid rgba(0,179,255,0.12);">
+      <div style="background: #ffffff; border-radius: 16px; overflow: hidden; display: flex; flex-direction: column; box-shadow: 0 4px 24px rgba(0,0,0,0.3);">
+        <div style="padding: 20px 22px 16px; border-bottom: 3px solid #00B3FF;">
           <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 12px;">
-            <div style="width: 36px; height: 36px; border-radius: 10px; background: rgba(0,179,255,0.15); border: 1px solid rgba(0,179,255,0.3); display: flex; align-items: center; justify-content: center;">
-              <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><circle cx="9" cy="9" r="7" stroke="#00B3FF" stroke-width="1.5"/><circle cx="9" cy="9" r="3.5" fill="#00B3FF" fill-opacity="0.4" stroke="#00B3FF" stroke-width="1"/><path d="M9 2v2M9 14v2M2 9h2M14 9h2" stroke="#00B3FF" stroke-width="1.5" stroke-linecap="round"/></svg>
+            <div style="width: 36px; height: 36px; border-radius: 10px; background: #EAF5FE; border: 1px solid #90D0FE; display: flex; align-items: center; justify-content: center;">
+              <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><circle cx="9" cy="9" r="7" stroke="#022AC0" stroke-width="1.5"/><circle cx="9" cy="9" r="3.5" fill="#066AFE" fill-opacity="0.4" stroke="#022AC0" stroke-width="1"/><path d="M9 2v2M9 14v2M2 9h2M14 9h2" stroke="#022AC0" stroke-width="1.5" stroke-linecap="round"/></svg>
             </div>
             <div>
-              <p style="font-size: 10px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--sf-blue-l); margin-bottom: 2px;">01</p>
-              <p style="font-family: var(--font-display); font-size: 17px; color: #fff;">Scalability</p>
+              <p style="font-size: 10px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #066AFE; margin-bottom: 2px;">01</p>
+              <p style="font-family: var(--font-display); font-size: 17px; color: #001E5B;">Scalability</p>
             </div>
           </div>
-          <p style="font-size: 13px; color: rgba(255,255,255,0.7); line-height: 1.6;">This architecture is <strong style="color:#fff;">ring-fenced for SACC today</strong> — but every component is provider-agnostic. Calvary operates across hospitals, aged care, and community health. The same flow deploys to every referral stream.</p>
+          <p style="font-size: 13px; color: #444447; line-height: 1.6;">This architecture is <strong style="color:#001E5B;">ring-fenced for SACC today</strong> — but every component is provider-agnostic. Calvary operates across hospitals, aged care, and community health. The same flow deploys to every referral stream.</p>
         </div>
-        <!-- SVG Mock: multi-provider node diagram -->
-        <div style="flex:1; padding: 16px 18px;">
+        <!-- SVG Mock: multi-provider node diagram (light bg) -->
+        <div style="flex:1; padding: 16px 18px; background: #F8FBFF;">
           <svg width="100%" viewBox="0 0 280 160" fill="none" xmlns="http://www.w3.org/2000/svg">
             <!-- Central Salesforce node -->
-            <rect x="100" y="60" width="80" height="40" rx="8" fill="rgba(2,42,192,0.6)" stroke="#066AFE" stroke-width="1.5"/>
-            <text x="140" y="76" text-anchor="middle" font-size="8" font-weight="700" fill="#00B3FF" font-family="sans-serif">SALESFORCE</text>
-            <text x="140" y="88" text-anchor="middle" font-size="7" fill="rgba(255,255,255,0.6)" font-family="sans-serif">Agentforce + Health Cloud</text>
-            <!-- Provider nodes -->
+            <rect x="100" y="60" width="80" height="40" rx="8" fill="#022AC0" stroke="#066AFE" stroke-width="1.5"/>
+            <text x="140" y="76" text-anchor="middle" font-size="8" font-weight="700" fill="#ffffff" font-family="sans-serif">SALESFORCE</text>
+            <text x="140" y="88" text-anchor="middle" font-size="6.5" fill="rgba(255,255,255,0.75)" font-family="sans-serif">Agentforce + Health Cloud</text>
             <!-- SACC (active) -->
-            <rect x="4" y="10" width="76" height="32" rx="6" fill="rgba(0,165,161,0.25)" stroke="#04E1CB" stroke-width="1.5"/>
-            <text x="42" y="23" text-anchor="middle" font-size="7" font-weight="700" fill="#04E1CB" font-family="sans-serif">SACC</text>
-            <text x="42" y="35" text-anchor="middle" font-size="6" fill="rgba(255,255,255,0.5)" font-family="sans-serif">Live · eReferral</text>
-            <line x1="80" y1="26" x2="100" y2="73" stroke="#04E1CB" stroke-width="1" stroke-dasharray="3,2"/>
+            <rect x="4" y="10" width="80" height="32" rx="6" fill="#00A3A1" stroke="#04E1CB" stroke-width="1.5"/>
+            <text x="44" y="23" text-anchor="middle" font-size="8" font-weight="700" fill="#ffffff" font-family="sans-serif">SACC</text>
+            <text x="44" y="35" text-anchor="middle" font-size="6.5" fill="rgba(255,255,255,0.85)" font-family="sans-serif">Live · eReferral</text>
+            <line x1="84" y1="26" x2="100" y2="73" stroke="#04E1CB" stroke-width="1.5" stroke-dasharray="4,2"/>
             <!-- Provider 2 -->
-            <rect x="4" y="64" width="76" height="32" rx="6" fill="rgba(2,42,192,0.2)" stroke="rgba(0,179,255,0.3)" stroke-width="1"/>
-            <text x="42" y="77" text-anchor="middle" font-size="7" font-weight="700" fill="rgba(0,179,255,0.7)" font-family="sans-serif">St John of God</text>
-            <text x="42" y="89" text-anchor="middle" font-size="6" fill="rgba(255,255,255,0.35)" font-family="sans-serif">Ready to deploy</text>
-            <line x1="80" y1="80" x2="100" y2="80" stroke="rgba(0,179,255,0.25)" stroke-width="1" stroke-dasharray="3,2"/>
+            <rect x="4" y="62" width="80" height="30" rx="6" fill="#EAF5FE" stroke="#066AFE" stroke-width="1"/>
+            <text x="44" y="75" text-anchor="middle" font-size="7" font-weight="700" fill="#022AC0" font-family="sans-serif">St John of God</text>
+            <text x="44" y="86" text-anchor="middle" font-size="6" fill="#5A5C61" font-family="sans-serif">Ready to deploy</text>
+            <line x1="84" y1="77" x2="100" y2="80" stroke="#066AFE" stroke-width="1" stroke-dasharray="3,2" stroke-opacity="0.5"/>
             <!-- Provider 3 -->
-            <rect x="4" y="118" width="76" height="32" rx="6" fill="rgba(2,42,192,0.2)" stroke="rgba(0,179,255,0.3)" stroke-width="1"/>
-            <text x="42" y="131" text-anchor="middle" font-size="7" font-weight="700" fill="rgba(0,179,255,0.7)" font-family="sans-serif">Bupa Home Health</text>
-            <text x="42" y="143" text-anchor="middle" font-size="6" fill="rgba(255,255,255,0.35)" font-family="sans-serif">Ready to deploy</text>
-            <line x1="80" y1="134" x2="100" y2="87" stroke="rgba(0,179,255,0.25)" stroke-width="1" stroke-dasharray="3,2"/>
+            <rect x="4" y="114" width="80" height="30" rx="6" fill="#EAF5FE" stroke="#066AFE" stroke-width="1"/>
+            <text x="44" y="127" text-anchor="middle" font-size="7" font-weight="700" fill="#022AC0" font-family="sans-serif">Bupa Home Health</text>
+            <text x="44" y="138" text-anchor="middle" font-size="6" fill="#5A5C61" font-family="sans-serif">Ready to deploy</text>
+            <line x1="84" y1="129" x2="100" y2="90" stroke="#066AFE" stroke-width="1" stroke-dasharray="3,2" stroke-opacity="0.5"/>
             <!-- Provider 4 -->
-            <rect x="200" y="10" width="76" height="32" rx="6" fill="rgba(2,42,192,0.2)" stroke="rgba(0,179,255,0.3)" stroke-width="1"/>
-            <text x="238" y="23" text-anchor="middle" font-size="7" font-weight="700" fill="rgba(0,179,255,0.7)" font-family="sans-serif">ACT Health</text>
-            <text x="238" y="35" text-anchor="middle" font-size="6" fill="rgba(255,255,255,0.35)" font-family="sans-serif">Ready to deploy</text>
-            <line x1="200" y1="26" x2="180" y2="73" stroke="rgba(0,179,255,0.25)" stroke-width="1" stroke-dasharray="3,2"/>
+            <rect x="196" y="10" width="80" height="30" rx="6" fill="#EAF5FE" stroke="#066AFE" stroke-width="1"/>
+            <text x="236" y="23" text-anchor="middle" font-size="7" font-weight="700" fill="#022AC0" font-family="sans-serif">ACT Health</text>
+            <text x="236" y="34" text-anchor="middle" font-size="6" fill="#5A5C61" font-family="sans-serif">Ready to deploy</text>
+            <line x1="196" y1="25" x2="180" y2="73" stroke="#066AFE" stroke-width="1" stroke-dasharray="3,2" stroke-opacity="0.5"/>
             <!-- Provider 5 -->
-            <rect x="200" y="64" width="76" height="32" rx="6" fill="rgba(2,42,192,0.2)" stroke="rgba(0,179,255,0.3)" stroke-width="1"/>
-            <text x="238" y="77" text-anchor="middle" font-size="7" font-weight="700" fill="rgba(0,179,255,0.7)" font-family="sans-serif">NSW Health</text>
-            <text x="238" y="89" text-anchor="middle" font-size="6" fill="rgba(255,255,255,0.35)" font-family="sans-serif">Ready to deploy</text>
-            <line x1="200" y1="80" x2="180" y2="80" stroke="rgba(0,179,255,0.25)" stroke-width="1" stroke-dasharray="3,2"/>
+            <rect x="196" y="62" width="80" height="30" rx="6" fill="#EAF5FE" stroke="#066AFE" stroke-width="1"/>
+            <text x="236" y="75" text-anchor="middle" font-size="7" font-weight="700" fill="#022AC0" font-family="sans-serif">NSW Health</text>
+            <text x="236" y="86" text-anchor="middle" font-size="6" fill="#5A5C61" font-family="sans-serif">Ready to deploy</text>
+            <line x1="196" y1="77" x2="180" y2="80" stroke="#066AFE" stroke-width="1" stroke-dasharray="3,2" stroke-opacity="0.5"/>
             <!-- Provider 6 -->
-            <rect x="200" y="118" width="76" height="32" rx="6" fill="rgba(2,42,192,0.2)" stroke="rgba(0,179,255,0.3)" stroke-width="1"/>
-            <text x="238" y="131" text-anchor="middle" font-size="7" font-weight="700" fill="rgba(0,179,255,0.7)" font-family="sans-serif">Calvary Aged Care</text>
-            <text x="238" y="143" text-anchor="middle" font-size="6" fill="rgba(255,255,255,0.35)" font-family="sans-serif">Ready to deploy</text>
-            <line x1="200" y1="134" x2="180" y2="87" stroke="rgba(0,179,255,0.25)" stroke-width="1" stroke-dasharray="3,2"/>
+            <rect x="196" y="114" width="80" height="30" rx="6" fill="#EAF5FE" stroke="#066AFE" stroke-width="1"/>
+            <text x="236" y="127" text-anchor="middle" font-size="7" font-weight="700" fill="#022AC0" font-family="sans-serif">Calvary Aged Care</text>
+            <text x="236" y="138" text-anchor="middle" font-size="6" fill="#5A5C61" font-family="sans-serif">Ready to deploy</text>
+            <line x1="196" y1="129" x2="180" y2="90" stroke="#066AFE" stroke-width="1" stroke-dasharray="3,2" stroke-opacity="0.5"/>
           </svg>
-          <p style="font-size: 11px; color: rgba(255,255,255,0.4); text-align: center; margin-top: 4px;">One architecture. Any provider, any referral stream.</p>
+          <p style="font-size: 11px; color: #737479; text-align: center; margin-top: 4px;">One architecture. Any provider, any referral stream.</p>
         </div>
       </div>
 
       <!-- ── PILLAR 2: RE-USABILITY ── -->
-      <div style="background: rgba(2,42,192,0.22); border: 1px solid rgba(0,179,255,0.22); border-radius: 16px; overflow: hidden; display: flex; flex-direction: column;">
-        <div style="padding: 20px 22px 14px; border-bottom: 1px solid rgba(0,179,255,0.12);">
+      <div style="background: #ffffff; border-radius: 16px; overflow: hidden; display: flex; flex-direction: column; box-shadow: 0 4px 24px rgba(0,0,0,0.3);">
+        <div style="padding: 20px 22px 16px; border-bottom: 3px solid #D17DFE;">
           <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 12px;">
-            <div style="width: 36px; height: 36px; border-radius: 10px; background: rgba(115,3,148,0.2); border: 1px solid rgba(115,3,148,0.4); display: flex; align-items: center; justify-content: center;">
-              <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M3 9a6 6 0 016-6v2a4 4 0 00-4 4H3z" fill="#D17DFE"/><path d="M15 9a6 6 0 01-6 6v-2a4 4 0 004-4h2z" fill="#D17DFE"/><circle cx="9" cy="9" r="2" fill="#D17DFE"/></svg>
+            <div style="width: 36px; height: 36px; border-radius: 10px; background: #F9F0FF; border: 1px solid #D17DFE; display: flex; align-items: center; justify-content: center;">
+              <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M3 9a6 6 0 016-6v2a4 4 0 00-4 4H3z" fill="#730394"/><path d="M15 9a6 6 0 01-6 6v-2a4 4 0 004-4h2z" fill="#730394"/><circle cx="9" cy="9" r="2" fill="#730394"/></svg>
             </div>
             <div>
-              <p style="font-size: 10px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--sf-blue-l); margin-bottom: 2px;">02</p>
-              <p style="font-family: var(--font-display); font-size: 17px; color: #fff;">Re-usability</p>
+              <p style="font-size: 10px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #730394; margin-bottom: 2px;">02</p>
+              <p style="font-family: var(--font-display); font-size: 17px; color: #001E5B;">Re-usability</p>
             </div>
           </div>
-          <p style="font-size: 13px; color: rgba(255,255,255,0.7); line-height: 1.6;">The agents built here aren't single-purpose. <strong style="color:#fff;">Clone and redeploy</strong> them anywhere documents need reading, or any workflow needs an outbound voice.</p>
+          <p style="font-size: 13px; color: #444447; line-height: 1.6;">The agents built here aren't single-purpose. <strong style="color:#001E5B;">Clone and redeploy</strong> them anywhere documents need reading, or any workflow needs an outbound voice.</p>
         </div>
-        <!-- SVG Mock: agent re-use diagram -->
-        <div style="flex:1; padding: 16px 18px;">
+        <!-- SVG Mock: agent re-use diagram (light bg) -->
+        <div style="flex:1; padding: 16px 18px; background: #F8FBFF;">
           <svg width="100%" viewBox="0 0 280 160" fill="none" xmlns="http://www.w3.org/2000/svg">
             <!-- Doc Extract Agent box -->
-            <rect x="4" y="8" width="110" height="38" rx="7" fill="rgba(0,165,161,0.2)" stroke="#04E1CB" stroke-width="1.5"/>
-            <text x="12" y="23" font-size="7" font-weight="700" fill="#04E1CB" font-family="sans-serif">Document Extract Agent</text>
-            <text x="12" y="38" font-size="6" fill="rgba(255,255,255,0.5)" font-family="sans-serif">eReferral PDFs → Health Cloud</text>
-            <!-- Clone arrow down -->
-            <path d="M59 46v14" stroke="rgba(255,255,255,0.2)" stroke-width="1" stroke-dasharray="2,2"/>
-            <polygon points="55,58 59,66 63,58" fill="rgba(255,255,255,0.2)"/>
+            <rect x="4" y="8" width="118" height="36" rx="7" fill="#00A3A1" stroke="#04E1CB" stroke-width="1.5"/>
+            <text x="63" y="23" text-anchor="middle" font-size="7.5" font-weight="700" fill="#ffffff" font-family="sans-serif">Document Extract Agent</text>
+            <text x="63" y="36" text-anchor="middle" font-size="6" fill="rgba(255,255,255,0.85)" font-family="sans-serif">eReferral PDFs → Health Cloud</text>
+            <!-- Clone arrows -->
+            <path d="M63 44v14" stroke="#00A3A1" stroke-width="1.5" stroke-dasharray="3,2"/>
+            <polygon points="59,56 63,64 67,56" fill="#00A3A1"/>
+            <text x="63" y="61" text-anchor="middle" font-size="6" fill="#00A3A1" font-family="sans-serif">clone</text>
             <!-- Cloned uses -->
-            <rect x="4" y="66" width="110" height="28" rx="6" fill="rgba(2,42,192,0.2)" stroke="rgba(0,165,161,0.25)" stroke-width="1"/>
-            <text x="12" y="78" font-size="6.5" fill="rgba(255,255,255,0.65)" font-family="sans-serif">Discharge summaries</text>
-            <text x="12" y="89" font-size="6" fill="rgba(255,255,255,0.4)" font-family="sans-serif">Any clinical document → record</text>
-            <rect x="4" y="100" width="110" height="28" rx="6" fill="rgba(2,42,192,0.2)" stroke="rgba(0,165,161,0.25)" stroke-width="1"/>
-            <text x="12" y="112" font-size="6.5" fill="rgba(255,255,255,0.65)" font-family="sans-serif">Aged care assessments</text>
-            <text x="12" y="123" font-size="6" fill="rgba(255,255,255,0.4)" font-family="sans-serif">ACFI / care plan PDFs</text>
-            <!-- Clone label -->
-            <text x="59" y="63" text-anchor="middle" font-size="6" fill="rgba(255,255,255,0.3)" font-family="sans-serif">clone</text>
+            <rect x="4" y="64" width="118" height="28" rx="6" fill="#EAF5FE" stroke="#066AFE" stroke-width="1"/>
+            <text x="14" y="77" font-size="7" font-weight="700" fill="#022AC0" font-family="sans-serif">Discharge summaries</text>
+            <text x="14" y="88" font-size="6" fill="#5A5C61" font-family="sans-serif">Any clinical doc → record</text>
+            <rect x="4" y="98" width="118" height="28" rx="6" fill="#EAF5FE" stroke="#066AFE" stroke-width="1"/>
+            <text x="14" y="111" font-size="7" font-weight="700" fill="#022AC0" font-family="sans-serif">Aged care assessments</text>
+            <text x="14" y="122" font-size="6" fill="#5A5C61" font-family="sans-serif">ACFI / care plan PDFs</text>
 
             <!-- Callback Agent box -->
-            <rect x="166" y="8" width="110" height="38" rx="7" fill="rgba(228,162,1,0.15)" stroke="#FCC003" stroke-width="1.5"/>
-            <text x="174" y="23" font-size="7" font-weight="700" fill="#FCC003" font-family="sans-serif">Call Back Agent</text>
-            <text x="174" y="38" font-size="6" fill="rgba(255,255,255,0.5)" font-family="sans-serif">Incomplete referral → provider call</text>
-            <!-- Clone arrow down -->
-            <path d="M221 46v14" stroke="rgba(255,255,255,0.2)" stroke-width="1" stroke-dasharray="2,2"/>
-            <polygon points="217,58 221,66 225,58" fill="rgba(255,255,255,0.2)"/>
+            <rect x="158" y="8" width="118" height="36" rx="7" fill="#E4A201" stroke="#FCC003" stroke-width="1.5"/>
+            <text x="217" y="23" text-anchor="middle" font-size="7.5" font-weight="700" fill="#ffffff" font-family="sans-serif">Call Back Agent</text>
+            <text x="217" y="36" text-anchor="middle" font-size="6" fill="rgba(255,255,255,0.85)" font-family="sans-serif">Incomplete referral → provider</text>
+            <!-- Clone arrows -->
+            <path d="M217 44v14" stroke="#E4A201" stroke-width="1.5" stroke-dasharray="3,2"/>
+            <polygon points="213,56 217,64 221,56" fill="#E4A201"/>
+            <text x="217" y="61" text-anchor="middle" font-size="6" fill="#E4A201" font-family="sans-serif">clone</text>
             <!-- Cloned uses -->
-            <rect x="166" y="66" width="110" height="28" rx="6" fill="rgba(2,42,192,0.2)" stroke="rgba(228,162,1,0.2)" stroke-width="1"/>
-            <text x="174" y="78" font-size="6.5" fill="rgba(255,255,255,0.65)" font-family="sans-serif">Post-discharge check-ins</text>
-            <text x="174" y="89" font-size="6" fill="rgba(255,255,255,0.4)" font-family="sans-serif">Voice · SMS · WhatsApp</text>
-            <rect x="166" y="100" width="110" height="28" rx="6" fill="rgba(2,42,192,0.2)" stroke="rgba(228,162,1,0.2)" stroke-width="1"/>
-            <text x="174" y="112" font-size="6.5" fill="rgba(255,255,255,0.65)" font-family="sans-serif">Medication reminders</text>
-            <text x="174" y="123" font-size="6" fill="rgba(255,255,255,0.4)" font-family="sans-serif">Appointment confirmations</text>
-            <!-- Clone label -->
-            <text x="221" y="63" text-anchor="middle" font-size="6" fill="rgba(255,255,255,0.3)" font-family="sans-serif">clone</text>
+            <rect x="158" y="64" width="118" height="28" rx="6" fill="#FBF3E0" stroke="#E4A201" stroke-width="1"/>
+            <text x="168" y="77" font-size="7" font-weight="700" fill="#4F2100" font-family="sans-serif">Post-discharge check-ins</text>
+            <text x="168" y="88" font-size="6" fill="#5A5C61" font-family="sans-serif">Voice · SMS · WhatsApp</text>
+            <rect x="158" y="98" width="118" height="28" rx="6" fill="#FBF3E0" stroke="#E4A201" stroke-width="1"/>
+            <text x="168" y="111" font-size="7" font-weight="700" fill="#4F2100" font-family="sans-serif">Medication reminders</text>
+            <text x="168" y="122" font-size="6" fill="#5A5C61" font-family="sans-serif">Appointment confirmations</text>
 
-            <!-- Channel icons row -->
-            <rect x="4" y="134" width="272" height="22" rx="5" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
-            <text x="140" y="148" text-anchor="middle" font-size="6.5" fill="rgba(255,255,255,0.4)" font-family="sans-serif">Any channel: Voice · SMS · WhatsApp · Email · In-app · Teams</text>
+            <!-- Channel footer -->
+            <rect x="4" y="134" width="272" height="20" rx="5" fill="#EAF5FE" stroke="#90D0FE" stroke-width="1"/>
+            <text x="140" y="147" text-anchor="middle" font-size="6.5" font-weight="700" fill="#022AC0" font-family="sans-serif">Any channel: Voice · SMS · WhatsApp · Email · In-app · Teams</text>
           </svg>
-          <p style="font-size: 11px; color: rgba(255,255,255,0.4); text-align: center; margin-top: 4px;">Build once, deploy everywhere healthcare has paper or a phone.</p>
+          <p style="font-size: 11px; color: #737479; text-align: center; margin-top: 4px;">Build once, deploy everywhere healthcare has paper or a phone.</p>
         </div>
       </div>
 
       <!-- ── PILLAR 3: FLEXIBILITY ── -->
-      <div style="background: rgba(2,42,192,0.22); border: 1px solid rgba(0,179,255,0.22); border-radius: 16px; overflow: hidden; display: flex; flex-direction: column;">
-        <div style="padding: 20px 22px 14px; border-bottom: 1px solid rgba(0,179,255,0.12);">
+      <div style="background: #ffffff; border-radius: 16px; overflow: hidden; display: flex; flex-direction: column; box-shadow: 0 4px 24px rgba(0,0,0,0.3);">
+        <div style="padding: 20px 22px 16px; border-bottom: 3px solid #FF538A;">
           <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 12px;">
-            <div style="width: 36px; height: 36px; border-radius: 10px; background: rgba(255,83,138,0.15); border: 1px solid rgba(255,83,138,0.35); display: flex; align-items: center; justify-content: center;">
-              <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><rect x="2" y="5" width="14" height="10" rx="2" stroke="#FF538A" stroke-width="1.5"/><path d="M6 5V4a3 3 0 016 0v1" stroke="#FF538A" stroke-width="1.5"/><circle cx="9" cy="10" r="1.5" fill="#FF538A"/></svg>
+            <div style="width: 36px; height: 36px; border-radius: 10px; background: #FEF0F3; border: 1px solid #FF538A; display: flex; align-items: center; justify-content: center;">
+              <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><rect x="2" y="5" width="14" height="10" rx="2" stroke="#B60554" stroke-width="1.5"/><path d="M6 5V4a3 3 0 016 0v1" stroke="#B60554" stroke-width="1.5"/><circle cx="9" cy="10" r="1.5" fill="#B60554"/></svg>
             </div>
             <div>
-              <p style="font-size: 10px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--sf-blue-l); margin-bottom: 2px;">03</p>
-              <p style="font-family: var(--font-display); font-size: 17px; color: #fff;">Flexibility</p>
+              <p style="font-size: 10px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #B60554; margin-bottom: 2px;">03</p>
+              <p style="font-family: var(--font-display); font-size: 17px; color: #001E5B;">Flexibility</p>
             </div>
           </div>
-          <p style="font-size: 13px; color: rgba(255,255,255,0.7); line-height: 1.6;">Salesforce <strong style="color:#fff;">Headless 360</strong> means the agentic experience isn't locked to Salesforce UI. Deliver it inside Teams, on an iPad, in any surface — without rebuilding the logic.</p>
+          <p style="font-size: 13px; color: #444447; line-height: 1.6;">Salesforce <strong style="color:#001E5B;">Headless 360</strong> means the agentic experience isn't locked to Salesforce UI. Deliver it inside Teams, on an iPad, in any surface — without rebuilding the logic.</p>
         </div>
-        <!-- SVG Mock: iPad in Teams showing referral list -->
-        <div style="flex:1; padding: 12px 16px; display: flex; align-items: center; justify-content: center;">
-          <svg width="100%" viewBox="0 0 280 156" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <!-- Teams window chrome -->
-            <rect x="0" y="0" width="280" height="156" rx="8" fill="#1F1F3A"/>
-            <!-- Teams title bar -->
-            <rect x="0" y="0" width="280" height="22" rx="8" fill="#292952"/>
-            <rect x="0" y="14" width="280" height="8" fill="#292952"/>
-            <circle cx="10" cy="11" r="4" fill="#FF5F57" opacity="0.7"/>
-            <circle cx="22" cy="11" r="4" fill="#FFBD2E" opacity="0.7"/>
-            <circle cx="34" cy="11" r="4" fill="#28C840" opacity="0.7"/>
-            <text x="140" y="14.5" text-anchor="middle" font-size="7" fill="rgba(255,255,255,0.5)" font-family="sans-serif">Microsoft Teams — Calvary Referral Review</text>
-            <!-- Teams sidebar -->
-            <rect x="0" y="22" width="36" height="134" fill="#1a1a36"/>
-            <!-- Teams nav icons (simplified) -->
-            <rect x="8" y="30" width="20" height="14" rx="3" fill="rgba(115,3,148,0.5)" stroke="rgba(209,125,254,0.4)" stroke-width="1"/>
-            <text x="18" y="40" text-anchor="middle" font-size="7" fill="rgba(255,255,255,0.6)" font-family="sans-serif">⌂</text>
-            <rect x="8" y="50" width="20" height="14" rx="3" fill="rgba(255,255,255,0.05)"/>
-            <text x="18" y="60" text-anchor="middle" font-size="7" fill="rgba(255,255,255,0.3)" font-family="sans-serif">💬</text>
-            <rect x="8" y="70" width="20" height="14" rx="3" fill="rgba(0,165,161,0.3)" stroke="#04E1CB" stroke-width="1"/>
-            <text x="18" y="80" text-anchor="middle" font-size="7" fill="#04E1CB" font-family="sans-serif">✦</text>
-            <text x="18" y="94" text-anchor="middle" font-size="5.5" fill="#04E1CB" font-family="sans-serif">Referrals</text>
-            <!-- Main panel background -->
-            <rect x="36" y="22" width="244" height="134" fill="#16213E"/>
-            <!-- Panel header -->
-            <rect x="36" y="22" width="244" height="26" fill="#1E2D50"/>
-            <text x="48" y="38" font-size="8" font-weight="700" fill="#fff" font-family="sans-serif">Empathetic Review Queue</text>
-            <rect x="216" y="28" width="52" height="13" rx="6" fill="rgba(0,165,161,0.25)" stroke="#04E1CB" stroke-width="1"/>
-            <text x="242" y="37.5" text-anchor="middle" font-size="6.5" fill="#04E1CB" font-family="sans-serif">4 pending</text>
-            <!-- Referral list items -->
-            <!-- Item 1 - highlighted/selected -->
-            <rect x="40" y="52" width="236" height="28" rx="5" fill="rgba(0,165,161,0.12)" stroke="#04E1CB" stroke-width="1"/>
-            <rect x="40" y="52" width="3" height="28" rx="1" fill="#04E1CB"/>
-            <text x="50" y="64" font-size="7" font-weight="700" fill="#fff" font-family="sans-serif">Margaret T. · 74F · High Priority</text>
-            <text x="50" y="75" font-size="6" fill="rgba(255,255,255,0.5)" font-family="sans-serif">Wound care · Multiple comorbidities · Review clinical notes</text>
-            <rect x="230" y="57" width="40" height="12" rx="6" fill="rgba(228,162,1,0.2)" stroke="#FCC003" stroke-width="0.75"/>
-            <text x="250" y="65.5" text-anchor="middle" font-size="5.5" fill="#FCC003" font-family="sans-serif">Empathy flag</text>
-            <!-- Item 2 -->
-            <rect x="40" y="84" width="236" height="24" rx="5" fill="rgba(2,42,192,0.15)" stroke="rgba(0,179,255,0.2)" stroke-width="0.75"/>
-            <text x="50" y="95" font-size="7" fill="rgba(255,255,255,0.8)" font-family="sans-serif">Robert K. · 81M · Palliative Support</text>
-            <text x="50" y="104" font-size="6" fill="rgba(255,255,255,0.4)" font-family="sans-serif">Agent flagged for human review · DOB confirmed</text>
-            <!-- Item 3 -->
-            <rect x="40" y="112" width="236" height="24" rx="5" fill="rgba(2,42,192,0.15)" stroke="rgba(0,179,255,0.2)" stroke-width="0.75"/>
-            <text x="50" y="123" font-size="7" fill="rgba(255,255,255,0.8)" font-family="sans-serif">Sandra M. · 68F · Cardiac Rehab</text>
-            <text x="50" y="132" font-size="6" fill="rgba(255,255,255,0.4)" font-family="sans-serif">Post-discharge · Medication reconciliation needed</text>
-            <!-- iPad frame hint bottom right -->
-            <rect x="200" y="136" width="76" height="14" rx="3" fill="rgba(255,83,138,0.1)" stroke="rgba(255,83,138,0.3)" stroke-width="0.75"/>
-            <text x="238" y="146" text-anchor="middle" font-size="6" fill="rgba(255,83,138,0.7)" font-family="sans-serif">Agentforce · Headless 360</text>
+        <!-- SVG Mock: Teams window — kept intentionally dark as it's a real-app mock -->
+        <div style="flex:1; padding: 12px 16px; background: #F8FBFF; display: flex; flex-direction: column; align-items: center; justify-content: center;">
+          <svg width="100%" viewBox="0 0 280 150" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- Outer frame / shadow -->
+            <rect x="1" y="1" width="278" height="148" rx="9" fill="#1B1B3A" stroke="#333366" stroke-width="1.5"/>
+            <!-- Title bar -->
+            <rect x="1" y="1" width="278" height="20" rx="9" fill="#2D2D5E"/>
+            <rect x="1" y="12" width="278" height="9" fill="#2D2D5E"/>
+            <circle cx="12" cy="11" r="4" fill="#FF5F57"/>
+            <circle cx="24" cy="11" r="4" fill="#FFBD2E"/>
+            <circle cx="36" cy="11" r="4" fill="#28C840"/>
+            <text x="148" y="14" text-anchor="middle" font-size="7" fill="rgba(255,255,255,0.65)" font-family="sans-serif" font-weight="600">Microsoft Teams — Calvary Home Health</text>
+            <!-- Sidebar -->
+            <rect x="1" y="21" width="38" height="128" fill="#1F1F48"/>
+            <!-- Sidebar icons -->
+            <rect x="9" y="28" width="22" height="15" rx="3" fill="rgba(209,125,254,0.2)" stroke="#D17DFE" stroke-width="0.75"/>
+            <text x="20" y="38" text-anchor="middle" font-size="8" fill="#D17DFE" font-family="sans-serif">⌂</text>
+            <rect x="9" y="49" width="22" height="15" rx="3" fill="rgba(255,255,255,0.04)"/>
+            <text x="20" y="59" text-anchor="middle" font-size="8" fill="rgba(255,255,255,0.35)" font-family="sans-serif">💬</text>
+            <!-- Active Agentforce tab -->
+            <rect x="9" y="70" width="22" height="15" rx="3" fill="#00A3A1" stroke="#04E1CB" stroke-width="1"/>
+            <text x="20" y="80" text-anchor="middle" font-size="8" fill="#fff" font-family="sans-serif">✦</text>
+            <text x="20" y="95" text-anchor="middle" font-size="5" fill="#04E1CB" font-family="sans-serif">Agents</text>
+            <!-- Main content area -->
+            <rect x="39" y="21" width="240" height="128" fill="#13132B"/>
+            <!-- Content header -->
+            <rect x="39" y="21" width="240" height="24" fill="#1E1E42"/>
+            <text x="50" y="36" font-size="8.5" font-weight="700" fill="#ffffff" font-family="sans-serif">Empathetic Review Queue</text>
+            <rect x="214" y="26" width="56" height="13" rx="6" fill="#00A3A1"/>
+            <text x="242" y="35.5" text-anchor="middle" font-size="6.5" font-weight="700" fill="#ffffff" font-family="sans-serif">4 pending</text>
+            <!-- Row 1 – selected -->
+            <rect x="43" y="50" width="232" height="27" rx="5" fill="rgba(0,163,161,0.18)" stroke="#04E1CB" stroke-width="1"/>
+            <rect x="43" y="50" width="3" height="27" rx="1.5" fill="#04E1CB"/>
+            <text x="53" y="62" font-size="7.5" font-weight="700" fill="#ffffff" font-family="sans-serif">Margaret T. · 74F · High Priority</text>
+            <text x="53" y="72" font-size="6" fill="rgba(255,255,255,0.65)" font-family="sans-serif">Wound care · Multiple comorbidities · Clinical notes flagged</text>
+            <rect x="222" y="54" width="46" height="12" rx="6" fill="#E4A201"/>
+            <text x="245" y="63" text-anchor="middle" font-size="6" font-weight="700" fill="#fff" font-family="sans-serif">Empathy flag</text>
+            <!-- Row 2 -->
+            <rect x="43" y="82" width="232" height="25" rx="5" fill="rgba(6,106,254,0.12)" stroke="rgba(0,179,255,0.3)" stroke-width="0.75"/>
+            <text x="53" y="94" font-size="7.5" fill="rgba(255,255,255,0.9)" font-family="sans-serif">Robert K. · 81M · Palliative Support</text>
+            <text x="53" y="103" font-size="6" fill="rgba(255,255,255,0.5)" font-family="sans-serif">Agent flagged for human review · DOB confirmed</text>
+            <!-- Row 3 -->
+            <rect x="43" y="112" width="232" height="25" rx="5" fill="rgba(6,106,254,0.12)" stroke="rgba(0,179,255,0.3)" stroke-width="0.75"/>
+            <text x="53" y="124" font-size="7.5" fill="rgba(255,255,255,0.9)" font-family="sans-serif">Sandra M. · 68F · Cardiac Rehab</text>
+            <text x="53" y="133" font-size="6" fill="rgba(255,255,255,0.5)" font-family="sans-serif">Post-discharge · Medication reconciliation needed</text>
+            <!-- Headless badge -->
+            <rect x="176" y="136" width="98" height="11" rx="3" fill="rgba(255,83,138,0.2)" stroke="#FF538A" stroke-width="0.75"/>
+            <text x="225" y="144" text-anchor="middle" font-size="6" font-weight="700" fill="#FF538A" font-family="sans-serif">Agentforce · Headless 360</text>
           </svg>
-          <p style="font-size: 11px; color: rgba(255,255,255,0.4); text-align: center; margin-top: 4px; position: absolute; bottom: 16px; left: 0; right: 0;">Agentforce inside Microsoft Teams — any surface, same intelligence.</p>
+          <p style="font-size: 11px; color: #737479; text-align: center; margin-top: 6px;">Agentforce inside Microsoft Teams — any surface, same intelligence.</p>
         </div>
       </div>
 
