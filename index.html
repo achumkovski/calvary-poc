@@ -814,44 +814,43 @@
   </div>
 
   <!-- ──────────────────────────────────────────────────────────
-       SLIDE 2: THE CHALLENGE — PROBLEM STATEMENT
+       SLIDE 2: THE CHALLENGE — WHY NOW
   ─────────────────────────────────────────────────────────── -->
-  <div class="slide bg-offwhite" data-section="The Challenge" style="padding: 56px 96px; justify-content: flex-start;">
-    <p class="eyebrow">The problem</p>
-    <h2 class="section-title" style="color: var(--sf-navy); margin-bottom: 20px;">~1,000 eReferrals a month.<br/>Every one processed by hand.</h2>
-    <div class="two-col" style="max-width: 960px; gap: 48px; align-items: start;">
-      <div>
-        <p style="font-size: 15px; color: #444447; line-height: 1.7; margin-bottom: 20px;">Calvary Community Care processes ~1,000 SACC eReferrals per month — entirely by hand. A team of 3–4 FTEs reads, interprets, and transcribes clinical data from PDF documents into Salesforce, one field at a time.</p>
-        <p style="font-size: 13px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--sf-blue); margin-bottom: 12px;">The consequences are significant</p>
-        <div style="display: flex; flex-direction: column; gap: 10px;">
-          <div style="display: flex; gap: 12px; align-items: flex-start;">
-            <div style="width: 5px; height: 5px; border-radius: 50%; background: var(--sf-blue); margin-top: 7px; flex-shrink: 0;"></div>
-            <p style="font-size: 14px; color: #444447; line-height: 1.6;"><strong style="color: var(--sf-navy);">Patients wait</strong> — referrals received outside business hours queue overnight and across weekends with no processing occurring</p>
-          </div>
-          <div style="display: flex; gap: 12px; align-items: flex-start;">
-            <div style="width: 5px; height: 5px; border-radius: 50%; background: var(--sf-blue); margin-top: 7px; flex-shrink: 0;"></div>
-            <p style="font-size: 14px; color: #444447; line-height: 1.6;"><strong style="color: var(--sf-navy);">Errors create compliance risk</strong> — manual transcription of mandatory fields generates SA Health breach notices</p>
-          </div>
-          <div style="display: flex; gap: 12px; align-items: flex-start;">
-            <div style="width: 5px; height: 5px; border-radius: 50%; background: var(--sf-blue); margin-top: 7px; flex-shrink: 0;"></div>
-            <p style="font-size: 14px; color: #444447; line-height: 1.6;"><strong style="color: var(--sf-navy);">Clinical staff are occupied with administration</strong> — nurses and coordinators spend their time on data entry, not care</p>
-          </div>
-          <div style="display: flex; gap: 12px; align-items: flex-start;">
-            <div style="width: 5px; height: 5px; border-radius: 50%; background: var(--sf-blue); margin-top: 7px; flex-shrink: 0;"></div>
-            <p style="font-size: 14px; color: #444447; line-height: 1.6;"><strong style="color: var(--sf-navy);">Scale requires headcount</strong> — every increase in referral volume demands more people</p>
-          </div>
+  <div class="slide bg-offwhite" data-section="The Challenge">
+    <p class="eyebrow">Why this — why now</p>
+    <h2 class="section-title" style="color: var(--sf-navy);">Friction in the referral funnel<br/>costs patients time they don't have.</h2>
+    <div class="card-row cols-4" style="max-width: 960px;">
+      <div class="card-item">
+        <div class="card-icon">
+          <img src="assets/icons/2d/Healthcare.svg" width="40" height="40" alt="Healthcare" />
         </div>
+        <p class="card-title" style="color: var(--sf-navy);">Manual PDF retrieval</p>
+        <p class="card-body"><strong>3–4 FTEs</strong> process ~1,000 SA Health referrals per month — pulling PDFs from portals by hand, one by one.</p>
       </div>
-      <div>
-        <div style="padding: 24px; background: rgba(2,42,192,0.06); border: 1px solid rgba(2,42,192,0.15); border-radius: 14px; margin-bottom: 16px;">
-          <p style="font-size: 13px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--sf-blue); margin-bottom: 10px;">The hidden cost</p>
-          <p style="font-size: 14px; color: #444447; line-height: 1.7;">The referral documents themselves are a rich source of clinical intelligence — medication charts, comorbidities, functional assessments, clinical notes. In the manual process, that information is never extracted. <strong style="color: var(--sf-navy);">It stays buried in the PDF, invisible to the care team, and lost to the patient record.</strong></p>
+      <div class="card-item">
+        <div class="card-icon">
+          <img src="assets/icons/2d/Service.png" width="40" height="40" alt="Service" />
         </div>
-        <div style="padding: 24px; background: rgba(0,165,161,0.08); border: 1px solid rgba(0,165,161,0.25); border-radius: 14px;">
-          <p style="font-size: 13px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent); margin-bottom: 10px;">What this POC tests</p>
-          <p style="font-size: 14px; color: #444447; line-height: 1.7;">Whether Agentforce + Salesforce Health Cloud can automate end-to-end SACC eReferral intake — from PDF ingestion through to appointment generation — while unlocking the clinical data the current process discards. <strong style="color: var(--sf-navy);">Human-in-the-loop checkpoints are preserved where clinical safety demands it. Everything else runs 24 hours a day.</strong></p>
-        </div>
+        <p class="card-title" style="color: var(--sf-navy);">Error-prone transcription</p>
+        <p class="card-body">Clinical data is <strong>typed in manually</strong> — laborious and error-prone, with no automated validation against mandatory fields.</p>
       </div>
+      <div class="card-item">
+        <div class="card-icon">
+          <img src="assets/icons/2d/Contact Center.png" width="40" height="40" alt="Contact Center" />
+        </div>
+        <p class="card-title" style="color: var(--sf-navy);">Missing mandatory fields</p>
+        <p class="card-body">DOB, Medicare ID, and IRN are frequently absent. <strong>Staff chase providers</strong> manually — delaying triage and creating compliance risk.</p>
+      </div>
+      <div class="card-item">
+        <div class="card-icon">
+          <img src="assets/icons/2d/Service Delivery.svg" width="40" height="40" alt="Service Delivery" />
+        </div>
+        <p class="card-title" style="color: var(--sf-navy);">After-hours backlogs</p>
+        <p class="card-body">Referrals received outside 7am–8pm go <strong>unprocessed until morning</strong> — urgent patients wait overnight for acknowledgement.</p>
+      </div>
+    </div>
+    <div style="margin-top: 24px; padding: 16px 20px; background: rgba(2,42,192,0.08); border: 1px solid rgba(2,42,192,0.15); border-radius: 10px; max-width: 960px;">
+      <p style="font-size: 14px; color: var(--sf-navy);"><strong>The impact:</strong> Delayed time-to-care for critical patients and severe compliance risk — including SA Health breach notices.</p>
     </div>
   </div>
 
