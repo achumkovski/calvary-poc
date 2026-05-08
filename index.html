@@ -726,21 +726,49 @@
     }
     .agent-badge.live  { background: rgba(0,165,161,0.2); color: var(--accent-l); border: 1px solid rgba(0,165,161,0.35); }
     .agent-badge.future { background: rgba(228,162,1,0.15); color: #FCC003; border: 1px solid rgba(228,162,1,0.3); }
-    .agent-chevron {
-      font-size: 12px; color: rgba(0,179,255,0.4);
-      display: block; text-align: right; transition: transform 0.3s; margin-top: 8px;
+    .agent-chevron-bar {
+      display: flex; align-items: center; justify-content: space-between;
+      margin-top: auto; padding-top: 10px;
+      border-top: 1px solid rgba(0,179,255,0.15);
     }
-    .agent-tile.active .agent-chevron { transform: rotate(180deg); color: var(--sf-blue-l); }
+    .agent-chevron-label {
+      font-size: 10px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase;
+      color: rgba(0,179,255,0.55);
+    }
+    .agent-tile.active .agent-chevron-label { color: var(--sf-blue-l); }
+    .agent-chevron {
+      width: 28px; height: 28px; border-radius: 50%;
+      background: rgba(0,179,255,0.12); border: 1px solid rgba(0,179,255,0.35);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 18px; line-height: 1; color: rgba(0,179,255,0.7);
+      transition: transform 0.3s, background 0.2s, color 0.2s;
+      flex-shrink: 0;
+    }
+    .agent-tile.active .agent-chevron {
+      transform: rotate(180deg);
+      background: rgba(0,179,255,0.22);
+      color: var(--sf-blue-l);
+      border-color: var(--sf-blue-l);
+    }
     .agent-expand {
       overflow: hidden; max-height: 0; opacity: 0;
-      transition: max-height 0.35s ease, opacity 0.25s ease;
+      transition: max-height 0.4s ease, opacity 0.3s ease;
     }
-    .agent-expand.open { max-height: 220px; opacity: 1; }
+    .agent-expand.open { max-height: 120px; opacity: 1; }
     .sub-card {
-      background: rgba(0,0,0,0.28);
-      border: 1px solid rgba(0,179,255,0.15);
-      border-radius: 8px; padding: 8px 10px;
-      font-size: 11px; color: rgba(255,255,255,0.72); line-height: 1.5;
+      background: #EAF5FE;
+      border: 1px solid #90D0FE;
+      border-radius: 8px; padding: 10px 12px;
+      font-size: 11px; color: #001E5B; line-height: 1.5;
+      font-weight: 600; flex: 1;
+    }
+    .sub-card .step-num {
+      font-size: 9px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase;
+      color: #066AFE; margin-bottom: 4px;
+    }
+    .flow-arrow {
+      font-size: 20px; color: rgba(0,179,255,0.5); flex-shrink: 0;
+      align-self: center; padding: 0 2px;
     }
 
     /* ── Slide-specific layout helpers ── */
@@ -945,63 +973,81 @@
 
       <!-- Agent 1: Document Extract -->
       <div>
-        <div class="agent-tile" onclick="toggleAgent('a1')">
+        <div class="agent-tile" onclick="toggleAgent('a1')" style="display: flex; flex-direction: column; height: 148px;">
           <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px;">
             <span class="agent-badge live">Live Agent</span>
             <img src="assets/icons/2d/Agentforce.svg" width="24" height="24" alt="Agentforce" />
           </div>
           <p class="card-title" style="font-size: 14px;">Document Extract Agent</p>
-          <p class="card-body" style="font-size: 12px; margin-top: 4px;">The 24/7 background worker — ingests every inbound referral PDF without coordinator involvement.</p>
-          <span class="agent-chevron">▾</span>
+          <p class="card-body" style="font-size: 12px; margin-top: 4px; flex: 1;">The 24/7 background worker — ingests every inbound referral PDF without coordinator involvement.</p>
+          <div class="agent-chevron-bar">
+            <span class="agent-chevron-label">Click to explore</span>
+            <div class="agent-chevron">▾</div>
+          </div>
         </div>
         <div class="agent-expand" id="a1">
-          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 6px; padding: 8px 0 0;">
-            <div class="sub-card">Ingests inbound referral PDFs from SA Health portal</div>
-            <div class="sub-card">Maps clinical fields directly to Health Cloud records</div>
-            <div class="sub-card">Routes referral — complete, pending, or incomplete</div>
-            <div class="sub-card">Operates 24/7 — no after-hours backlog</div>
+          <div style="display: flex; align-items: stretch; gap: 0; padding: 8px 0 0;">
+            <div class="sub-card"><div class="step-num">Step 01</div>Ingests inbound referral PDFs from SA Health portal</div>
+            <div class="flow-arrow">›</div>
+            <div class="sub-card"><div class="step-num">Step 02</div>Maps clinical fields directly to Health Cloud records</div>
+            <div class="flow-arrow">›</div>
+            <div class="sub-card"><div class="step-num">Step 03</div>Routes referral — complete, pending, or incomplete</div>
+            <div class="flow-arrow">›</div>
+            <div class="sub-card"><div class="step-num">Step 04</div>Operates 24/7 — no after-hours backlog</div>
           </div>
         </div>
       </div>
 
       <!-- Agent 2: Care Lead Assistive -->
       <div>
-        <div class="agent-tile" onclick="toggleAgent('a2')">
+        <div class="agent-tile" onclick="toggleAgent('a2')" style="display: flex; flex-direction: column; height: 148px;">
           <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px;">
             <span class="agent-badge live">Live Agent</span>
             <img src="assets/icons/2d/Agentforce.svg" width="24" height="24" alt="Agentforce" />
           </div>
           <p class="card-title" style="font-size: 14px;">Care Lead Assistive Agent</p>
-          <p class="card-body" style="font-size: 12px; margin-top: 4px;">The in-workflow copilot — surfaces patient context on demand so coordinators focus on decisions, not file hunting.</p>
-          <span class="agent-chevron">▾</span>
+          <p class="card-body" style="font-size: 12px; margin-top: 4px; flex: 1;">The in-workflow copilot — surfaces patient context so coordinators focus on decisions, not file hunting.</p>
+          <div class="agent-chevron-bar">
+            <span class="agent-chevron-label">Click to explore</span>
+            <div class="agent-chevron">▾</div>
+          </div>
         </div>
         <div class="agent-expand" id="a2">
-          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 6px; padding: 8px 0 0;">
-            <div class="sub-card">Summarises patient data on demand for the Care Lead</div>
-            <div class="sub-card">Surfaces medications, comorbidities &amp; clinical notes</div>
-            <div class="sub-card">Assists with complex bookings requiring human judgment</div>
-            <div class="sub-card">Reduces time spent searching across records</div>
+          <div style="display: flex; align-items: stretch; gap: 0; padding: 8px 0 0;">
+            <div class="sub-card"><div class="step-num">Step 01</div>Summarises patient data on demand for the Care Lead</div>
+            <div class="flow-arrow">›</div>
+            <div class="sub-card"><div class="step-num">Step 02</div>Surfaces medications, comorbidities &amp; clinical notes</div>
+            <div class="flow-arrow">›</div>
+            <div class="sub-card"><div class="step-num">Step 03</div>Assists with complex bookings requiring human judgment</div>
+            <div class="flow-arrow">›</div>
+            <div class="sub-card"><div class="step-num">Step 04</div>Reduces time spent searching across records</div>
           </div>
         </div>
       </div>
 
       <!-- Agent 3: Call Back -->
       <div>
-        <div class="agent-tile" onclick="toggleAgent('a3')">
+        <div class="agent-tile" onclick="toggleAgent('a3')" style="display: flex; flex-direction: column; height: 148px;">
           <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px;">
             <span class="agent-badge future">Future Agent</span>
             <img src="assets/icons/2d/Agentforce.svg" width="24" height="24" alt="Agentforce" />
           </div>
           <p class="card-title" style="font-size: 14px;">Call Back Agent</p>
-          <p class="card-body" style="font-size: 12px; margin-top: 4px;">The outbound initiator — automatically contacts providers when mandatory fields are missing from a referral.</p>
-          <span class="agent-chevron">▾</span>
+          <p class="card-body" style="font-size: 12px; margin-top: 4px; flex: 1;">The outbound initiator — automatically contacts providers when mandatory fields are missing from a referral.</p>
+          <div class="agent-chevron-bar">
+            <span class="agent-chevron-label">Click to explore</span>
+            <div class="agent-chevron">▾</div>
+          </div>
         </div>
         <div class="agent-expand" id="a3">
-          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 6px; padding: 8px 0 0;">
-            <div class="sub-card">Detects missing mandatory fields — DOB, Medicare ID, IRN</div>
-            <div class="sub-card">Initiates outbound call or SMS to the referring provider</div>
-            <div class="sub-card">Updates the referral record once information is received</div>
-            <div class="sub-card">Eliminates manual provider chasing by coordinators</div>
+          <div style="display: flex; align-items: stretch; gap: 0; padding: 8px 0 0;">
+            <div class="sub-card"><div class="step-num">Step 01</div>Detects missing mandatory fields — DOB, Medicare ID, IRN</div>
+            <div class="flow-arrow">›</div>
+            <div class="sub-card"><div class="step-num">Step 02</div>Initiates outbound call or SMS to the referring provider</div>
+            <div class="flow-arrow">›</div>
+            <div class="sub-card"><div class="step-num">Step 03</div>Updates the referral record once information is received</div>
+            <div class="flow-arrow">›</div>
+            <div class="sub-card"><div class="step-num">Step 04</div>Eliminates manual provider chasing by coordinators</div>
           </div>
         </div>
       </div>
