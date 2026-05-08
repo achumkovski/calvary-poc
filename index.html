@@ -852,58 +852,55 @@
   <!-- ──────────────────────────────────────────────────────────
        SLIDE 2: THE CHALLENGE — WHY NOW
   ─────────────────────────────────────────────────────────── -->
-  <div class="slide bg-offwhite" data-section="The Challenge" style="padding: 52px 96px; justify-content: flex-start;">
-    <p class="eyebrow">The problem</p>
-    <h2 class="section-title" style="color: var(--sf-navy); margin-bottom: 20px;">~600 eReferrals a month.<br/>Every one processed by hand.</h2>
-    <div style="display: grid; grid-template-columns: 1fr auto; gap: 32px; width: 100%; align-items: start;">
-      <div>
-        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-bottom: 12px;">
-          <div class="card-item" style="border-top: 3px solid #066AFE; padding: 16px 14px;">
-            <div class="card-icon" style="margin-bottom: 10px;">
-              <img src="assets/icons/2d/Robotics Process Automation.png" width="32" height="32" alt="Manual processing" />
-            </div>
-            <p class="card-title" style="color: var(--sf-navy); font-size: 13px;">Hundreds of hours lost to manual processing</p>
-            <p class="card-body" style="font-size: 12px;">Clinical data <strong>transcribed field by field</strong> from PDFs into Salesforce — 600 referrals per month, entirely by hand.</p>
-          </div>
-          <div class="card-item" style="border-top: 3px solid #FF538A; padding: 16px 14px;">
-            <div class="card-icon" style="margin-bottom: 10px;">
-              <img src="assets/icons/2d/Healthcare.svg" width="32" height="32" alt="Patients wait" />
-            </div>
-            <p class="card-title" style="color: var(--sf-navy); font-size: 13px;">Patients wait</p>
-            <p class="card-body" style="font-size: 12px;">Referrals received outside business hours <strong>queue overnight and across weekends</strong> with no processing occurring.</p>
-          </div>
-          <div class="card-item" style="border-top: 3px solid #E4A201; padding: 16px 14px;">
-            <div class="card-icon" style="margin-bottom: 10px;">
-              <img src="assets/icons/2d/Service.png" width="32" height="32" alt="Compliance risk" />
-            </div>
-            <p class="card-title" style="color: var(--sf-navy); font-size: 13px;">Errors create compliance risk</p>
-            <p class="card-body" style="font-size: 12px;">Manual transcription of mandatory fields <strong>generates SA Health breach notices</strong> — a direct regulatory consequence.</p>
-          </div>
-          <div class="card-item" style="border-top: 3px solid #730394; padding: 16px 14px;">
-            <div class="card-icon" style="margin-bottom: 10px;">
-              <img src="assets/icons/2d/Contact Center.png" width="32" height="32" alt="Clinical staff" />
-            </div>
-            <p class="card-title" style="color: var(--sf-navy); font-size: 13px;">Clinical staff doing admin</p>
-            <p class="card-body" style="font-size: 12px;">Nurses and coordinators <strong>spend their time on data entry, not care</strong> — the highest-cost misallocation in the workflow.</p>
-          </div>
-          <div class="card-item" style="border-top: 3px solid #06A59A; padding: 16px 14px; grid-column: span 2;">
-            <div class="card-icon" style="margin-bottom: 10px;">
-              <img src="assets/icons/2d/Data Cloud.png" width="32" height="32" alt="Clinical intelligence" />
-            </div>
-            <p class="card-title" style="color: var(--sf-navy); font-size: 13px;">Clinical intelligence buried and lost</p>
-            <p class="card-body" style="font-size: 12px;">Medication charts, comorbidities, and clinical notes <strong>stay buried in the PDF</strong> — invisible to the care team across the entire episode of care.</p>
-          </div>
-        </div>
-        <div style="padding: 13px 18px; background: rgba(2,42,192,0.08); border: 1px solid rgba(2,42,192,0.15); border-radius: 10px;">
-          <p style="font-size: 13px; color: var(--sf-navy);"><strong>The impact:</strong> Delayed time-to-care for critical patients and severe compliance risk — including SA Health breach notices.</p>
-        </div>
+  <div class="slide bg-offwhite" data-section="The Challenge" style="padding: 36px 72px; justify-content: flex-start;">
+    <p class="eyebrow" style="margin-bottom: 6px;">The problem</p>
+    <h2 class="section-title" style="color: var(--sf-navy); font-size: 28px; margin-bottom: 16px;">~600 eReferrals a month. Every one processed by hand.</h2>
+
+    <!-- 5 equal challenge cards -->
+    <div style="display: grid; grid-template-columns: repeat(5,1fr); gap: 10px; width: 100%; margin-bottom: 10px;">
+      <div class="card-item" style="border-top: 3px solid #066AFE; padding: 14px 12px;">
+        <div style="margin-bottom: 8px;"><img src="assets/icons/2d/Robotics Process Automation.png" width="28" height="28" alt="Manual processing" /></div>
+        <p class="card-title" style="color: var(--sf-navy); font-size: 12px;">Hundreds of hours lost</p>
+        <p class="card-body" style="font-size: 11px;">Clinical data <strong>transcribed field by field</strong> — 600 referrals per month, entirely by hand.</p>
       </div>
-      <div style="width: 280px; flex-shrink: 0;">
-        <img src="assets/referral-sample.png"
-             alt="Example SACC eReferral — complex multi-service referral with medications"
-             style="width: 280px; border-radius: 10px; box-shadow: 0 8px 32px rgba(0,30,91,0.18); border: 1px solid rgba(2,42,192,0.15); display: block;" />
-        <p style="font-size: 10px; color: var(--muted); text-align: center; margin-top: 8px; letter-spacing: 0.04em;">Example SACC eReferral — mocked up</p>
+      <div class="card-item" style="border-top: 3px solid #FF538A; padding: 14px 12px;">
+        <div style="margin-bottom: 8px;"><img src="assets/icons/2d/Healthcare.svg" width="28" height="28" alt="Patients wait" /></div>
+        <p class="card-title" style="color: var(--sf-navy); font-size: 12px;">Patients wait</p>
+        <p class="card-body" style="font-size: 11px;">Referrals received outside hours <strong>queue overnight and across weekends</strong> unprocessed.</p>
       </div>
+      <div class="card-item" style="border-top: 3px solid #E4A201; padding: 14px 12px;">
+        <div style="margin-bottom: 8px;"><img src="assets/icons/2d/Service.png" width="28" height="28" alt="Compliance risk" /></div>
+        <p class="card-title" style="color: var(--sf-navy); font-size: 12px;">Errors create compliance risk</p>
+        <p class="card-body" style="font-size: 11px;">Mandatory field errors <strong>generate SA Health breach notices</strong> — a direct regulatory consequence.</p>
+      </div>
+      <div class="card-item" style="border-top: 3px solid #730394; padding: 14px 12px;">
+        <div style="margin-bottom: 8px;"><img src="assets/icons/2d/Contact Center.png" width="28" height="28" alt="Clinical staff" /></div>
+        <p class="card-title" style="color: var(--sf-navy); font-size: 12px;">Clinical staff doing admin</p>
+        <p class="card-body" style="font-size: 11px;">Nurses and coordinators <strong>on data entry, not care</strong> — the highest-cost misallocation.</p>
+      </div>
+      <div class="card-item" style="border-top: 3px solid #06A59A; padding: 14px 12px;">
+        <div style="margin-bottom: 8px;"><img src="assets/icons/2d/Data Cloud.png" width="28" height="28" alt="Clinical intelligence" /></div>
+        <p class="card-title" style="color: var(--sf-navy); font-size: 12px;">Clinical intelligence lost</p>
+        <p class="card-body" style="font-size: 11px;">Medications, comorbidities, clinical notes — <strong>buried in the PDF</strong>, invisible across the episode of care.</p>
+      </div>
+    </div>
+
+    <!-- Impact bar -->
+    <div style="padding: 10px 16px; background: rgba(2,42,192,0.08); border: 1px solid rgba(2,42,192,0.15); border-radius: 8px; width: 100%; margin-bottom: 14px;">
+      <p style="font-size: 12px; color: var(--sf-navy);"><strong>The impact:</strong> Delayed time-to-care for critical patients and severe compliance risk — including SA Health breach notices.</p>
+    </div>
+
+    <!-- All 9 referral pages side by side -->
+    <div style="display: flex; gap: 6px; width: 100%; align-items: flex-start;">
+      <img src="assets/referral-pages/page-1.png" alt="Referral page 1" style="flex: 1; min-width: 0; border-radius: 4px; border: 1px solid rgba(2,42,192,0.12); box-shadow: 0 2px 8px rgba(0,30,91,0.1);" />
+      <img src="assets/referral-pages/page-2.png" alt="Referral page 2" style="flex: 1; min-width: 0; border-radius: 4px; border: 1px solid rgba(2,42,192,0.12); box-shadow: 0 2px 8px rgba(0,30,91,0.1);" />
+      <img src="assets/referral-pages/page-3.png" alt="Referral page 3" style="flex: 1; min-width: 0; border-radius: 4px; border: 1px solid rgba(2,42,192,0.12); box-shadow: 0 2px 8px rgba(0,30,91,0.1);" />
+      <img src="assets/referral-pages/page-4.png" alt="Referral page 4" style="flex: 1; min-width: 0; border-radius: 4px; border: 1px solid rgba(2,42,192,0.12); box-shadow: 0 2px 8px rgba(0,30,91,0.1);" />
+      <img src="assets/referral-pages/page-5.png" alt="Referral page 5" style="flex: 1; min-width: 0; border-radius: 4px; border: 1px solid rgba(2,42,192,0.12); box-shadow: 0 2px 8px rgba(0,30,91,0.1);" />
+      <img src="assets/referral-pages/page-6.png" alt="Referral page 6" style="flex: 1; min-width: 0; border-radius: 4px; border: 1px solid rgba(2,42,192,0.12); box-shadow: 0 2px 8px rgba(0,30,91,0.1);" />
+      <img src="assets/referral-pages/page-7.png" alt="Referral page 7" style="flex: 1; min-width: 0; border-radius: 4px; border: 1px solid rgba(2,42,192,0.12); box-shadow: 0 2px 8px rgba(0,30,91,0.1);" />
+      <img src="assets/referral-pages/page-8.png" alt="Referral page 8" style="flex: 1; min-width: 0; border-radius: 4px; border: 1px solid rgba(2,42,192,0.12); box-shadow: 0 2px 8px rgba(0,30,91,0.1);" />
+      <img src="assets/referral-pages/page-9.png" alt="Referral page 9" style="flex: 1; min-width: 0; border-radius: 4px; border: 1px solid rgba(2,42,192,0.12); box-shadow: 0 2px 8px rgba(0,30,91,0.1);" />
     </div>
   </div>
 
