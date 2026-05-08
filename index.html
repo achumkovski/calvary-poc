@@ -929,6 +929,111 @@
   </div>
 
   <!-- ──────────────────────────────────────────────────────────
+       SLIDE 3: WHY NOT OCR + RPA?
+  ─────────────────────────────────────────────────────────── -->
+  <div class="slide bg-offwhite" data-section="Why AI?" style="padding: 56px 72px; justify-content: flex-start; align-items: stretch;">
+
+    <div style="margin-bottom: 28px;">
+      <p class="eyebrow" style="margin-bottom: 6px;">The smarter path</p>
+      <h2 class="section-title" style="color: var(--sf-navy); font-size: clamp(24px,2.8vw,36px); margin-bottom: 8px;">
+        OCR + RPA automates the steps.<br/><em style="color: var(--accent); font-style: normal;">Agentforce understands the document.</em>
+      </h2>
+    </div>
+
+    <!-- Two-column comparison -->
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; width: 100%; flex: 1; align-items: start;">
+
+      <!-- LEFT: Old Way -->
+      <div style="background: #fff; border-radius: 14px; overflow: hidden; box-shadow: var(--shadow-card);">
+        <div style="background: #F3F3F3; padding: 16px 24px; border-bottom: 3px solid #737479; display: flex; align-items: center; gap: 12px;">
+          <div style="width: 32px; height: 32px; border-radius: 8px; background: #E5E5E5; display: flex; align-items: center; justify-content: center;">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><rect x="1" y="2" width="14" height="11" rx="2" stroke="#737479" stroke-width="1.5"/><path d="M4 6h8M4 9h5" stroke="#737479" stroke-width="1.5" stroke-linecap="round"/></svg>
+          </div>
+          <div>
+            <p style="font-size: 10px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #737479; margin-bottom: 1px;">The old way</p>
+            <p style="font-family: var(--font-display); font-size: 16px; color: #444447;">OCR + RPA</p>
+          </div>
+        </div>
+        <div style="padding: 0;">
+          <div style="display: flex; gap: 14px; align-items: flex-start; padding: 14px 22px; border-bottom: 1px solid #F3F3F3;">
+            <div style="width: 6px; height: 6px; border-radius: 50%; background: #DA1710; flex-shrink: 0; margin-top: 6px;"></div>
+            <div>
+              <p style="font-size: 13px; font-weight: 700; color: #444447; margin-bottom: 2px;">Rigid, layout-dependent</p>
+              <p style="font-size: 12px; color: #737479; line-height: 1.55;">Breaks the moment a referring hospital changes their template. Every new format requires a developer to remap the rules.</p>
+            </div>
+          </div>
+          <div style="display: flex; gap: 14px; align-items: flex-start; padding: 14px 22px; border-bottom: 1px solid #F3F3F3;">
+            <div style="width: 6px; height: 6px; border-radius: 50%; background: #DA1710; flex-shrink: 0; margin-top: 6px;"></div>
+            <div>
+              <p style="font-size: 13px; font-weight: 700; color: #444447; margin-bottom: 2px;">No comprehension — only characters</p>
+              <p style="font-size: 12px; color: #737479; line-height: 1.55;">Can't tell "DOB", "D.O.B." and "born 14 March 1952" are the same thing. Clinical shorthand and free-text notes are invisible.</p>
+            </div>
+          </div>
+          <div style="display: flex; gap: 14px; align-items: flex-start; padding: 14px 22px; border-bottom: 1px solid #F3F3F3;">
+            <div style="width: 6px; height: 6px; border-radius: 50%; background: #DA1710; flex-shrink: 0; margin-top: 6px;"></div>
+            <div>
+              <p style="font-size: 13px; font-weight: 700; color: #444447; margin-bottom: 2px;">Fails silently on exceptions</p>
+              <p style="font-size: 12px; color: #737479; line-height: 1.55;">A missing mandatory field crashes the workflow or writes bad data — with no ability to reason, escalate, or recover.</p>
+            </div>
+          </div>
+          <div style="display: flex; gap: 14px; align-items: flex-start; padding: 14px 22px;">
+            <div style="width: 6px; height: 6px; border-radius: 50%; background: #DA1710; flex-shrink: 0; margin-top: 6px;"></div>
+            <div>
+              <p style="font-size: 13px; font-weight: 700; color: #444447; margin-bottom: 2px;">Follows rules. Can't handle the unknown.</p>
+              <p style="font-size: 12px; color: #737479; line-height: 1.55;">Every edge case must be anticipated and coded. A referral format it's never seen before will always fail.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT: New Way -->
+      <div style="background: var(--sf-navy); border-radius: 14px; overflow: hidden; box-shadow: var(--shadow-card);">
+        <div style="background: rgba(0,165,161,0.18); padding: 16px 24px; border-bottom: 3px solid var(--accent); display: flex; align-items: center; gap: 12px;">
+          <div style="width: 32px; height: 32px; border-radius: 8px; background: rgba(0,165,161,0.25); border: 1px solid rgba(0,165,161,0.4); display: flex; align-items: center; justify-content: center;">
+            <img src="assets/icons/2d/Agentforce.svg" width="18" height="18" alt="Agentforce" />
+          </div>
+          <div>
+            <p style="font-size: 10px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent-l); margin-bottom: 1px;">The new way</p>
+            <p style="font-family: var(--font-display); font-size: 16px; color: #fff;">Agentforce + LLMs</p>
+          </div>
+        </div>
+        <div style="padding: 0;">
+          <div style="display: flex; gap: 14px; align-items: flex-start; padding: 14px 22px; border-bottom: 1px solid rgba(255,255,255,0.06);">
+            <div style="width: 6px; height: 6px; border-radius: 50%; background: var(--accent-l); flex-shrink: 0; margin-top: 6px;"></div>
+            <div>
+              <p style="font-size: 13px; font-weight: 700; color: #fff; margin-bottom: 2px;">Layout-agnostic by design</p>
+              <p style="font-size: 12px; color: rgba(255,255,255,0.6); line-height: 1.55;">Reads a referral like a human does — understanding context, not matching pixels. Any template, any sender, zero re-engineering.</p>
+            </div>
+          </div>
+          <div style="display: flex; gap: 14px; align-items: flex-start; padding: 14px 22px; border-bottom: 1px solid rgba(255,255,255,0.06);">
+            <div style="width: 6px; height: 6px; border-radius: 50%; background: var(--accent-l); flex-shrink: 0; margin-top: 6px;"></div>
+            <div>
+              <p style="font-size: 13px; font-weight: 700; color: #fff; margin-bottom: 2px;">True clinical comprehension</p>
+              <p style="font-size: 12px; color: rgba(255,255,255,0.6); line-height: 1.55;">Understands abbreviations, free-text notes, medications, comorbidities — surfacing the full clinical picture, not just the typed fields.</p>
+            </div>
+          </div>
+          <div style="display: flex; gap: 14px; align-items: flex-start; padding: 14px 22px; border-bottom: 1px solid rgba(255,255,255,0.06);">
+            <div style="width: 6px; height: 6px; border-radius: 50%; background: var(--accent-l); flex-shrink: 0; margin-top: 6px;"></div>
+            <div>
+              <p style="font-size: 13px; font-weight: 700; color: #fff; margin-bottom: 2px;">Reasons through exceptions</p>
+              <p style="font-size: 12px; color: rgba(255,255,255,0.6); line-height: 1.55;">Missing a mandatory field? The agent detects it, decides what to do, and triggers the right action — a callback, a flag, a human review.</p>
+            </div>
+          </div>
+          <div style="display: flex; gap: 14px; align-items: flex-start; padding: 14px 22px;">
+            <div style="width: 6px; height: 6px; border-radius: 50%; background: var(--accent-l); flex-shrink: 0; margin-top: 6px;"></div>
+            <div>
+              <p style="font-size: 13px; font-weight: 700; color: #fff; margin-bottom: 2px;">Handles cases it's never seen before</p>
+              <p style="font-size: 12px; color: rgba(255,255,255,0.6); line-height: 1.55;">Reasoning replaces rules. A new referral format, a novel clinical scenario — the agent adapts without a developer rewriting anything.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- ──────────────────────────────────────────────────────────
        SLIDE 4: THE DESIGN QUESTION
   ─────────────────────────────────────────────────────────── -->
   <div class="slide bg-dark" data-section="Design Question">
