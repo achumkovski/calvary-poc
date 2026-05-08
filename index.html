@@ -728,7 +728,7 @@
     .agent-badge.future { background: rgba(228,162,1,0.15); color: #FCC003; border: 1px solid rgba(228,162,1,0.3); }
     .agent-chevron-bar {
       display: flex; align-items: center; justify-content: space-between;
-      margin-top: auto; padding-top: 10px;
+      margin-top: auto; padding-top: 7px;
       border-top: 1px solid rgba(0,179,255,0.15);
     }
     .agent-chevron-label {
@@ -753,8 +753,9 @@
     .agent-expand {
       overflow: hidden; max-height: 0; opacity: 0;
       transition: max-height 0.4s ease, opacity 0.3s ease;
+      margin-top: 0;
     }
-    .agent-expand.open { max-height: 160px; opacity: 1; }
+    .agent-expand.open { max-height: 140px; opacity: 1; margin-top: 8px; }
     .sub-card {
       background: #EAF5FE;
       border: 1px solid #90D0FE;
@@ -963,19 +964,19 @@
   <!-- ──────────────────────────────────────────────────────────
        SLIDE 4: THE ECOSYSTEM
   ─────────────────────────────────────────────────────────── -->
-  <div class="slide bg-navy" data-section="The Ecosystem">
-    <p class="eyebrow">The agentic architecture</p>
-    <h2 class="section-title">Agents + Humans = Healthier Outcomes.</h2>
+  <div class="slide bg-navy" data-section="The Ecosystem" style="justify-content: flex-start; padding-top: 56px;">
+    <p class="eyebrow" style="margin-bottom: 8px;">The agentic architecture</p>
+    <h2 class="section-title" style="margin-bottom: 16px;">Agents + Humans = Healthier Outcomes.</h2>
 
     <!-- Agent row -->
-    <p style="font-size: 10px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--sf-blue-l); margin-bottom: 10px;">AI Agents — click to explore</p>
-    <div style="display: flex; flex-direction: column; width: 100%; max-width: 820px; margin-bottom: 16px;">
+    <p style="font-size: 10px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--sf-blue-l); margin-bottom: 8px;">AI Agents — click to explore</p>
+    <div style="display: flex; flex-direction: column; width: 100%; max-width: 820px; margin-bottom: 24px;">
 
       <!-- Tiles row -->
       <div style="display: grid; grid-template-columns: repeat(3,1fr); gap: 12px;">
 
         <!-- Agent 1: Document Extract -->
-        <div class="agent-tile" data-agent="a1" onclick="toggleAgent('a1')" style="display: flex; flex-direction: column; height: 148px;">
+        <div class="agent-tile" data-agent="a1" onclick="toggleAgent('a1')" style="display: flex; flex-direction: column; height: 136px;">
           <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px;">
             <span class="agent-badge live">Live Agent</span>
             <img src="assets/icons/2d/Agentforce.svg" width="24" height="24" alt="Agentforce" />
@@ -989,7 +990,7 @@
         </div>
 
         <!-- Agent 2: Care Lead Assistive -->
-        <div class="agent-tile" data-agent="a2" onclick="toggleAgent('a2')" style="display: flex; flex-direction: column; height: 148px;">
+        <div class="agent-tile" data-agent="a2" onclick="toggleAgent('a2')" style="display: flex; flex-direction: column; height: 136px;">
           <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px;">
             <span class="agent-badge live">Live Agent</span>
             <img src="assets/icons/2d/Agentforce.svg" width="24" height="24" alt="Agentforce" />
@@ -1003,7 +1004,7 @@
         </div>
 
         <!-- Agent 3: Call Back -->
-        <div class="agent-tile" data-agent="a3" onclick="toggleAgent('a3')" style="display: flex; flex-direction: column; height: 148px;">
+        <div class="agent-tile" data-agent="a3" onclick="toggleAgent('a3')" style="display: flex; flex-direction: column; height: 136px;">
           <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px;">
             <span class="agent-badge future">Future Agent</span>
             <img src="assets/icons/2d/Agentforce.svg" width="24" height="24" alt="Agentforce" />
