@@ -818,44 +818,46 @@
   ─────────────────────────────────────────────────────────── -->
   <div class="slide bg-offwhite" data-section="The Challenge" style="padding: 52px 96px;">
     <p class="eyebrow">The problem</p>
-    <h2 class="section-title" style="color: var(--sf-navy); margin-bottom: 8px;">~1,000 eReferrals a month.<br/>Every one processed by hand.</h2>
-    <p style="font-size: 14px; color: var(--muted); margin-bottom: 20px; max-width: 700px;">A team of 3–4 FTEs reads, interprets, and transcribes clinical data from PDF documents into Salesforce, one field at a time. The consequences are significant.</p>
-    <div class="card-row cols-3" style="max-width: 960px; margin-bottom: 12px;">
-      <div class="card-item" style="border-top: 3px solid #066AFE;">
-        <div class="card-icon">
-          <img src="assets/icons/2d/Healthcare.svg" width="40" height="40" alt="Healthcare" />
+    <h2 class="section-title" style="color: var(--sf-navy); margin-bottom: 20px;">~600 eReferrals a month.<br/>Every one processed by hand.</h2>
+    <div style="display: grid; grid-template-columns: repeat(5, 1fr); gap: 12px; width: 100%; max-width: 1060px;">
+      <div class="card-item" style="border-top: 3px solid #066AFE; padding: 18px 16px;">
+        <div class="card-icon" style="margin-bottom: 10px;">
+          <img src="assets/icons/2d/Robotics Process Automation.png" width="36" height="36" alt="Manual processing" />
         </div>
-        <p class="card-title" style="color: var(--sf-navy);">Patients wait</p>
-        <p class="card-body">Referrals received outside business hours <strong>queue overnight and across weekends</strong> with no processing occurring.</p>
+        <p class="card-title" style="color: var(--sf-navy); font-size: 14px;">Hundreds of hours lost to manual processing</p>
+        <p class="card-body" style="font-size: 12px;">Clinical data <strong>transcribed field by field</strong> from PDFs into Salesforce — 600 referrals per month, entirely by hand.</p>
       </div>
-      <div class="card-item" style="border-top: 3px solid #FF538A;">
-        <div class="card-icon">
-          <img src="assets/icons/2d/Service.png" width="40" height="40" alt="Service" />
+      <div class="card-item" style="border-top: 3px solid #FF538A; padding: 18px 16px;">
+        <div class="card-icon" style="margin-bottom: 10px;">
+          <img src="assets/icons/2d/Healthcare.svg" width="36" height="36" alt="Patients wait" />
         </div>
-        <p class="card-title" style="color: var(--sf-navy);">Errors create compliance risk</p>
-        <p class="card-body">Manual transcription of mandatory fields <strong>generates SA Health breach notices</strong> — a direct regulatory consequence.</p>
+        <p class="card-title" style="color: var(--sf-navy); font-size: 14px;">Patients wait</p>
+        <p class="card-body" style="font-size: 12px;">Referrals received outside business hours <strong>queue overnight and across weekends</strong> with no processing occurring.</p>
       </div>
-      <div class="card-item" style="border-top: 3px solid #E4A201;">
-        <div class="card-icon">
-          <img src="assets/icons/2d/Contact Center.png" width="40" height="40" alt="Contact Center" />
+      <div class="card-item" style="border-top: 3px solid #E4A201; padding: 18px 16px;">
+        <div class="card-icon" style="margin-bottom: 10px;">
+          <img src="assets/icons/2d/Service.png" width="36" height="36" alt="Compliance risk" />
         </div>
-        <p class="card-title" style="color: var(--sf-navy);">Clinical staff doing admin</p>
-        <p class="card-body">Nurses and coordinators <strong>spend their time on data entry, not care</strong> — the highest-cost misallocation in the workflow.</p>
+        <p class="card-title" style="color: var(--sf-navy); font-size: 14px;">Errors create compliance risk</p>
+        <p class="card-body" style="font-size: 12px;">Manual transcription of mandatory fields <strong>generates SA Health breach notices</strong> — a direct regulatory consequence.</p>
       </div>
-      <div class="card-item" style="border-top: 3px solid #730394;">
-        <div class="card-icon">
-          <img src="assets/icons/2d/Service Delivery.svg" width="40" height="40" alt="Service Delivery" />
+      <div class="card-item" style="border-top: 3px solid #730394; padding: 18px 16px;">
+        <div class="card-icon" style="margin-bottom: 10px;">
+          <img src="assets/icons/2d/Contact Center.png" width="36" height="36" alt="Clinical staff" />
         </div>
-        <p class="card-title" style="color: var(--sf-navy);">Scale requires headcount</p>
-        <p class="card-body">Every increase in referral volume <strong>demands more people</strong> — there is no efficiency curve in a fully manual process.</p>
+        <p class="card-title" style="color: var(--sf-navy); font-size: 14px;">Clinical staff doing admin</p>
+        <p class="card-body" style="font-size: 12px;">Nurses and coordinators <strong>spend their time on data entry, not care</strong> — the highest-cost misallocation in the workflow.</p>
       </div>
-      <div class="card-item" style="border-top: 3px solid #06A59A; grid-column: span 2;">
-        <div class="card-icon">
-          <img src="assets/icons/2d/Data Cloud.png" width="40" height="40" alt="Data Cloud" />
+      <div class="card-item" style="border-top: 3px solid #06A59A; padding: 18px 16px;">
+        <div class="card-icon" style="margin-bottom: 10px;">
+          <img src="assets/icons/2d/Data Cloud.png" width="36" height="36" alt="Clinical intelligence" />
         </div>
-        <p class="card-title" style="color: var(--sf-navy);">The hidden cost — clinical intelligence discarded</p>
-        <p class="card-body">The referral PDFs carry medication charts, comorbidities, functional assessments, and clinical notes. In the manual process, <strong>that information is never extracted</strong> — it stays buried in the PDF, invisible to the care team, and lost to the patient record. This POC tests whether Agentforce + Health Cloud can unlock it.</p>
+        <p class="card-title" style="color: var(--sf-navy); font-size: 14px;">Clinical intelligence buried and lost</p>
+        <p class="card-body" style="font-size: 12px;">Medication charts, comorbidities, and clinical notes <strong>stay buried in the PDF</strong> — invisible to the care team across the entire episode of care.</p>
       </div>
+    </div>
+    <div style="margin-top: 16px; padding: 14px 20px; background: rgba(2,42,192,0.08); border: 1px solid rgba(2,42,192,0.15); border-radius: 10px; width: 100%; max-width: 1060px;">
+      <p style="font-size: 13px; color: var(--sf-navy);"><strong>The impact:</strong> Delayed time-to-care for critical patients and severe compliance risk — including SA Health breach notices.</p>
     </div>
   </div>
 
