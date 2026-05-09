@@ -713,7 +713,7 @@
       background: rgba(2,42,192,0.25);
       border: 1px solid rgba(0,179,255,0.25);
       border-radius: 14px;
-      padding: 16px 16px 10px;
+      padding: 16px 16px 40px;
       cursor: pointer;
       transition: border-color 0.2s, background 0.2s;
       user-select: none;
@@ -1071,7 +1071,7 @@
       <div style="display: grid; grid-template-columns: repeat(3,1fr); gap: 12px;">
 
         <!-- Agent 1: Document Extract -->
-        <div class="agent-tile" data-agent="a1" onclick="toggleAgent('a1')" style="display: flex; flex-direction: column; height: 136px;">
+        <div class="agent-tile" data-agent="a1" onclick="toggleAgent('a1')" style="display: flex; flex-direction: column;">
           <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px;">
             <span class="agent-badge live">Live Agent</span>
             <img src="assets/icons/2d/Agentforce.svg" width="24" height="24" alt="Agentforce" />
@@ -1082,7 +1082,7 @@
         </div>
 
         <!-- Agent 2: Care Lead Assistive -->
-        <div class="agent-tile" data-agent="a2" onclick="toggleAgent('a2')" style="display: flex; flex-direction: column; height: 136px;">
+        <div class="agent-tile" data-agent="a2" onclick="toggleAgent('a2')" style="display: flex; flex-direction: column;">
           <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px;">
             <span class="agent-badge live">Live Agent</span>
             <img src="assets/icons/2d/Agentforce.svg" width="24" height="24" alt="Agentforce" />
@@ -1093,7 +1093,7 @@
         </div>
 
         <!-- Agent 3: Call Back -->
-        <div class="agent-tile" data-agent="a3" onclick="toggleAgent('a3')" style="display: flex; flex-direction: column; height: 136px;">
+        <div class="agent-tile" data-agent="a3" onclick="toggleAgent('a3')" style="display: flex; flex-direction: column;">
           <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px;">
             <span class="agent-badge future">Future Agent</span>
             <img src="assets/icons/2d/Agentforce.svg" width="24" height="24" alt="Agentforce" />
